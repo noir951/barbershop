@@ -1,75 +1,153 @@
 <!DOCTYPE html>
 <html lang="ru">
+
 <head>
     <meta charset="UTF-8">
     <title>Barbershop</title>
+    <link rel="stylesheet" href="app/css/style.css">
 </head>
+
 <body>
-    <header class="header">
-        <img src="app/img/mobile/logotype-mobile.png" alt="BARBERSHOP">
-        <nav class="nav">
-            <div class="nav__btn"></div>
-            <div class="nav__container">
-                <ul class="nav__list">
-                    <li class="nav__item"><a href="index.html">главная</a></li>
-                    <li class="nav__item"><a href="#">наши работы</a></li>
-                    <li class="nav__item"><a href="#">записаться</a></li>
-                    <li class="nav__item"><a href="#">контакты</a></li>
-                    <li class="nav__item"><a href="#">html academy</a></li>
-                    <li class="nav__item"><a href="#">вход</a></li>
+    <header class="page-header">
+        <div class="logo">
+            <img src="app/img/mobile/logotype-mobile.png" alt="Barbershop Borodinsky">
+            <h1 class="visually-hidden">Barbershop Borodinsky</h1>
+        </div>
+        <nav class="page-nav">
+           <div class="wrapper">
+            <button class="page-nav__btn">Меню</button>
+            <div class="page-nav__container">
+                <ul class="page-nav__list">
+                    <li class="page-nav__item page-nav__item--active"><a href="index.html">главная</a></li>
+                    <li class="page-nav__item"><a href="#">наши работы</a></li>
+                    <li class="page-nav__item"><a href="#">записаться</a></li>
+                    <li class="page-nav__item"><a href="#">контакты</a></li>
+                    <li class="page-nav__item"><a href="#">html academy</a></li>
                 </ul>
+                <ul class="page-nav__user-bar">
+                    <li class="page-van__user-bar--enter-btn"><a href="#">вход</a></li>
+                </ul>
+            </div>
             </div>
         </nav>
     </header>
-    <section class="statistics">
+    <section class="stat">
+           <div class="wrapper">
         <div class="stat__header">
-            <h2>стрижка у нас это выгодно!</h2>
-            <p>Мужская стрижка требует точного подхода. Обратимся к статистике:</p>
+            <h2 class="stat__heading">стрижка у нас это выгодно!</h2>
+            <p class="stat__intro">Мужская стрижка требует точного подхода. Обратимся к статистике:</p>
+            <span class="stat__remark text hidden">* - приведенные данные ложь</span>
         </div>
-        <div class="stat__block">
-            <span class="text">1500*</span>
-            <p class="text">рублей вложений</p>
+        <div class="stat__blocks">
+            <div class="stat__block">
+                <span class="stat__block-price">1500*</span>
+                <p class="stat__block-text">рублей вложений</p>
+            </div>
+            <div class="stat__block">
+                <span class="stat__block-price">7200</span>
+                <p class="stat__block-text">секунд времени мастера</p>
+            </div>
+            <div class="stat__block">
+                <span class="stat__block-price">90000</span>
+                <p class="stat__block-text">постриженных волос</p>
+            </div>
+            <div class="stat__block">
+                <span class="stat__block-price">500000*</span>
+                <p class="stat__block-text">лайков и комментариев</p>
+            </div>
         </div>
-        <div class="stat__block">
-            <span class="text">7200</span>
-            <p class="text">секунд времени мастера</p>
+        <span class="stat__remark">* - приведенные данные ложь</span>
         </div>
-        <div class="stat__block">
-            <span class="text">90000</span>
-            <p class="text">постриженных волос</p>
-        </div>
-        <div class="stat__block">
-            <span class="text">500000*</span>
-            <p class="text">лайков и комментариев</p>
-        </div>
-        <p class="stat__remark text">* - приведенные данные ложь</p>
     </section>
     <section class="advantages">
-        <div class="slider">
-            <div class="slider__container">
-                <div class="slider__item">
-                    <img src="app/img/mobile/advantage-1-illustration.png" alt="" class="advantages">
-                    <h2>быстро</h2>
-                    <p>мы делаем свою работу быстро! Два часа пролетят назаметно и Вы - счастливый обладатель стильной стрижки-минутки</p>
+           <div class="wrapper">
+        <div class="advantages__slider">
+            <div class="advantages__slider-container">
+                <div class="advantages__item">
+                    <img src="app/img/mobile/advantage-1-illustration.png" width="95px" height="94px">
+                    <h2 class="advantages__item-heading">быстро</h2>
+                    <p class="advantages__item-text">мы делаем свою работу быстро! Два часа пролетят назаметно и Вы - счастливый обладатель стильной стрижки-минутки</p>
                 </div>
                 <div class="slider__item">
-                    <img src="app/img/mobile/advantage-2-illustration.png" alt="" class="advantages">
-                    <h2>круто</h2>
-                    <p>Забудьте, как вы стриглись раньше. Мы сделаем из Вас звезду футбола или кино. Во всяком случае внешне.</p>
+                    <img src="app/img/mobile/advantage-2-illustration.png" width="95px" height="88px">
+                    <h2 class="advantages__item-heading">круто</h2>
+                    <p class="advantages__item-text">Забудьте, как вы стриглись раньше. Мы сделаем из Вас звезду футбола или кино. Во всяком случае внешне.</p>
                 </div>
                 <div class="slider__item">
-                    <img src="app/img/mobile/advantage-3-illustration.png" alt="" class="advantages">
-                    <h2>дорого</h2>
-                    <p>Наши мастера - профессионалы своего дела и не могут стоить дёшево. К тому же, разве цена не даёт определённый статус?</p>
+                    <img src="app/img/mobile/advantage-3-illustration.png" width="95px" height="91px">
+                    <h2 class="advantages__item-heading">дорого</h2>
+                    <p class="advantages__item-text">Наши мастера - профессионалы своего дела и не могут стоить дёшево. К тому же, разве цена не даёт определённый статус?</p>
                 </div>
             </div>
-            <div class="slider__controls">
-                
+            <div class="advantager__slider-controls">
+                <span class="advantages__slider-toggle"></span>
+                <span class="advantages__slider-toggle"></span>
+                <span class="advantages__slider-toggle"></span>
             </div>
         </div>
+        </div>
+    </section>
+    <section class="news">
+           <div class="wrapper">
+        <h2 class="news__heading">Новости и акции</h2>
+        <div class="news__preview">
+            <div class="news__date">
+                <p><span class="day">29</span>сент</p>
+            </div>
+            <p class="news__text">Нам наконец завезли Ягермайстер! Теперь Вы можете пропустить стаканчик во время стрижки.</p>
+        </div>
+        <div class="news__preview">
+            <div class="news__date">
+                <p><span class="day">19</span>сент</p>
+            </div>
+            <p class="news__text">В нашей команде пополнение, Борис "Бритва" Стригунец, обладатель многих титулов и наград пополнил наши стройные ряды. Спешите записаться!</p>
+        </div>
+        <a href="#" class="news__btn btn">Показать все</a>
+        </div>
+    </section>
+    <section class="reviews">
+           <div class="wrapper">
+        <h2 class="reviews__heading">Отзывы о нас</h2>
+        <div class="reviews__slider">
+            <div class="reviews__slider-container">
+                <div class="reviews__item">
+                    <img src="app/img/mobile/advantage-1-illustration.png" width="95px" height="94px">
+                    <h3 class="reviews__item-heading">Тревис Баркер</h3>
+                    <p class="reviews__item-text">Спасибо за лысину! Был проездом в Москве, заскочил побриться, чтобы было видно новою татуировку!</p>
+                </div>
+                <div class="slider__item">
+                    <img src="app/img/mobile/advantage-2-illustration.png" width="95px" height="88px">
+                    <h3 class="reviews__item-heading">Тревис Баркер</h3>
+                    <p class="reviews__item-text">Спасибо за лысину! Был проездом в Москве, заскочил побриться, чтобы было видно новою татуировку!</p>
+                </div>
+                <div class="slider__item">
+                    <img src="app/img/mobile/advantage-3-illustration.png" width="95px" height="91px">
+                    <h3 class="reviews__item-heading">Тревис Баркер</h3>
+                    <p class="reviews__item-text">Спасибо за лысину! Был проездом в Москве, заскочил побриться, чтобы было видно новою татуировку!</p>
+                </div>
+            </div>
+            <div class="reviews__slider-controls">
+                <span class="reviews__slider-toggle"></span>
+                <span class="reviews__slider-toggle"></span>
+                <span class="reviews__slider-toggle"></span>
+            </div>
+               </div></div>
     </section>
     <footer class="footer">
-        
+        <div class="wrapper">
+            <p class="footer__address"><span class="footer__address-name"></span></p>
+            <button class="footer__phone btn" type="button">+8 (888) 888-88-88</button>
+            <div class="footer__social">
+                <span class="footer__social--vk">vk</span>
+                <span class="footer__social--fb">fb</span>
+                <span class="footer__social--inst">inst</span>
+            </div>
+            <div class="footer__copy">
+                <p class="footer__copy--text">Разработано:</p>
+                <a class="footer__btn btn" href="http://github.com/noir951">NOir951</a>
+            </div>
+        </div>
     </footer>
 </body>
+
 </html>
