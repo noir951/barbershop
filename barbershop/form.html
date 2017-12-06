@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Form</title>
+    <link rel="stylesheet" href="app/css/style.css">
+</head>
+
+<body>
+    <header class="page-header">
+        <div class="page-header__logo">
+            <img src="app/img/mobile/logotype-mobile.png" alt="Barbershop Borodinsky" width="226px" height="30px">
+            <h1 class="visually-hidden">Barbershop Borodinsky</h1>
+        </div>
+        <nav class="page-nav page-nav--closed">
+            <button type="button" class="page-nav__btn">Меню</button>
+            <div class="page-nav__container">
+                <ul class="page-nav__list">
+                    <li class="page-nav__item"><a href="index.html">главная</a></li>
+                    <li class="page-nav__item"><a href="works.html">наши работы</a></li>
+                    <li class="page-nav__item"><a class="active" href="#">записаться</a></li>
+                    <li class="page-nav__item"><a href="contacts.html">контакты</a></li>
+                    <li class="page-nav__item"><a href="academy.html">html academy</a></li>
+                </ul>
+                <ul class="page-nav__user-bar">
+                    <li class="page-van__user-bar--enter-btn">
+                        <a href="#"><img src="app/img/mobile/login.png"> вход</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <form class="form" action="#" method="get">
+        <div class="wrapper">
+            <h2 class="form__heading">Запись на стрижку</h2>
+            <input type="text" name="surname" id="surname" class="form-surname" placeholder="Фамилия">
+            <input type="text" name="name" id="name" class="form-name" placeholder="Имя">
+            <input type="text" name="patronymic" id="patronymic" class="form-patronymic" placeholder="Отчество">
+            <input type="phone" name="phone" id="phone" class="form-phone" placeholder="Контактный телефон">
+            <input type="email" name="email" id="email" class="form-email" placeholder="Контактный e-mail">
+            <textarea name="info" id="info" class="form-info" placeholder="Доп. информация для мастера"></textarea>
+            <p class="form__group-heading">Выберите модель бороды:</p>
+            <label class="beard-shape"><input type="radio" name="beard-shape" value="1"><div class="radio-btn"></div>адмирал<img src="app/img/mobile/beard-1.png" width="52px" height="49px" alt="борода раз"></label>
+            <div class="form-beard-shape"></div>
+            <label class="beard-shape"><input type="radio" name="beard-shape" value="2"><div class="radio-btn"></div>лесоруб<img src="app/img/mobile/beard-2.png" width="58px" height="68px" alt="борода два"></label>
+            <label class="beard-shape"><input type="radio" name="beard-shape" value="3"><div class="radio-btn"></div>полярник<img src="app/img/mobile/beard-3.png" width="64px" height="78px" alt="три борода"></label>
+            <label class="beard-shape"><input type="radio" name="beard-shape" value="4"><div class="radio-btn"></div>боярин<img src="app/img/mobile/beard-4.png" width="58px" height="98px" alt="четыре борода"></label>
+            <label class="beard-shape"><input type="radio" name="beard-shape" value="5"><div class="radio-btn"></div>мудрец<img src="app/img/mobile/beard-5.png" width="46px" height="105px" alt="и пять борода"></label>
+            <p class="form__group-heading">Дополнительные услуги:</p>
+            <label><input type="checkbox" name="additionally" id="1">Подкрасить бороду</label>
+            <label><input type="checkbox" name="additionally" id="2">Накрутить усы</label>
+            <label><input type="checkbox" name="additionally" id="3">Причесать бороду</label>
+            <label><input type="checkbox" name="additionally" id="4">Подровнять виски</label>
+            <label><input type="checkbox" name="additionally" id="5">Убрать седину</label>
+            <label><input type="checkbox" name="additionally" id="6">Отполировать лысину</label>
+            <input class="form-btn btn" type="submit" value="Отправить заявку">
+        </div>
+    </form>
+    <footer class="footer">
+        <div class="wrapper">
+            <p class="footer__address"><span class="footer__address-name">Барбершоп Бородинский</span><br>г. Санкт-Петербург, ул. Большая Конюшенная, 19/8</p>
+            <button class="footer__phone btn" type="button">+8 (888) 888-88-88</button>
+            <div class="footer__social">
+                <span class="footer__social--vk">vk</span>
+                <span class="footer__social--fb">fb</span>
+                <span class="footer__social--inst">inst</span>
+            </div>
+            <div class="footer__copy">
+                <p class="footer__copy--text">Разработано:</p>
+                <a class="footer__btn btn" href="http://github.com/noir951">NOir951</a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

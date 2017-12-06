@@ -1,8 +1,9 @@
+//    Global
 @import "variables";
 @import "mixin";
 @import "global/scaffolding";
 
-
+//    Index page
 @import "blocks/page-header";
 @import "blocks/page-nav";
 @import "blocks/stat";
@@ -10,3 +11,6 @@
 @import "blocks/news";
 @import "blocks/reviews";
 @import "blocks/page-footer";
+
+//    Form page
+@import "blocks/form";

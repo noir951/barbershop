@@ -112,7 +112,8 @@ h2[class$="heading"] {
 
 .page-nav--closed .page-nav__btn {
   display: block;
-  right: 0; }
+  right: 0;
+  z-index: 1; }
   .page-nav--closed .page-nav__btn::after {
     content: "";
     display: block;
@@ -121,6 +122,11 @@ h2[class$="heading"] {
     background-color: white;
     margin: 0 auto;
     box-shadow: 0 8px white, 0 -8px white; }
+
+.page-nav--closed .active {
+  position: absolute;
+  top: 0;
+  width: 95%; }
 
 .page-nav--closed .page-nav__container {
   height: 50px;
@@ -233,7 +239,9 @@ h2[class$="heading"] {
     .advantages .slider__item img {
       min-height: 94px; }
   .advantages__slider-controls {
-    text-align: center; }
+    text-align: center;
+    position: absolute;
+    bottom: 10px; }
   .advantages input {
     display: none; }
   .advantages label[for$="-slide"] {
@@ -247,14 +255,19 @@ h2[class$="heading"] {
     .advantages label[for$="-slide"]:last-child {
       margin: 0; }
 
-.advantages__slider input[id="advantages-first-slider"]:checked ~ .advantages__slider-container {
+.advantages__slider #advantages-first-slider:checked ~ .advantages__slider-container {
   transform: translateX(0); }
 
-.advantages__slider input[id="advantages-second-slide"]:checked ~ .advantages__slider-container {
+.advantages__slider #advantages-second-slide:checked ~ .advantages__slider-container {
   transform: translateX(-280px); }
 
-.advantages__slider input[id="advantages-third-slide"]:checked ~ .advantages__slider-container {
+.advantages__slider #advantages-third-slide:checked ~ .advantages__slider-container {
   transform: translateX(-560px); }
+
+.advantages__slider #advantages-first-slide:checked ~ .advantages__slider-controls label[for="advantages-first-slide"],
+.advantages__slider #advantages-second-slide:checked ~ .advantages__slider-controls label[for="advantages-second-slide"],
+.advantages__slider #advantages-third-slide:checked ~ .advantages__slider-controls label[for="advantages-third-slide"] {
+  background-color: #fff; }
 
 .news__preview {
   padding: 20px 0;
@@ -361,10 +374,10 @@ h2[class$="heading"] {
 .reviews __slider-controls {
   text-align: center; }
 
-input {
+.reviews input {
   display: none; }
 
-label[for$="-slide"] {
+.reviews label[for$="-slide"] {
   display: inline-block;
   width: 10px;
   height: 10px;
@@ -372,7 +385,7 @@ label[for$="-slide"] {
   border: 1px solid #000;
   transform: rotate(45deg);
   margin-right: 10px; }
-  label[for$="-slide"]:last-child {
+  .reviews label[for$="-slide"]:last-child {
     margin: 0; }
 
 .reviews__slider input[id="reviews-first-slider"]:checked ~ .reviews__slider-container {
@@ -430,3 +443,62 @@ label[for$="-slide"] {
     border: 1px solid #e5ddd5;
     background-color: #242424;
     margin-bottom: 25px; }
+
+.form {
+  background-color: #f8f5f2;
+  margin: 0;
+  padding: 0; }
+  .form input[type="text"],
+  .form input[type="phone"],
+  .form input[type="email"],
+  .form textarea {
+    height: 50px;
+    width: 100%;
+    box-sizing: border-box;
+    border: 1px solid #e6ded6;
+    margin-bottom: 6px;
+    padding: 20px;
+    font-family: "PT Sans Narrow", sans-serif;
+    font-size: 18px; }
+  .form textarea {
+    line-height: 27px;
+    padding: 20px; }
+  .form .form__group-heading {
+    font-size: 20px;
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: 300;
+    padding: 20px; }
+  .form .beard-shape {
+    display: block;
+    float: left;
+    width: 33%;
+    min-height: 201px;
+    text-align: center; }
+  .form .radio-btn {
+    position: relative;
+    box-sizing: border-box;
+    display: inline-block;
+    height: 52px;
+    width: 52px;
+    border: 1px solid #e6ded6;
+    border-radius: 50%;
+    background-color: #fff; }
+    .form .radio-btn::after {
+      content: "";
+      display: none;
+      box-sizing: border-box;
+      width: 18px;
+      height: 18px;
+      border: 1px solid #e6ded6;
+      border-radius: 50%;
+      background-color: white;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      margin-top: -9px;
+      margin-left: -9px; }
+  .form input[name="beard-shape"] {
+    display: none; }
+  .form input[name="beard-shape"]:checked + .radio-btn::after {
+    display: block; }
