@@ -41,20 +41,24 @@
             <input type="email" name="email" id="email" class="form-email" placeholder="Контактный e-mail">
             <textarea name="info" id="info" class="form-info" placeholder="Доп. информация для мастера"></textarea>
             <p class="form__group-heading">Выберите модель бороды:</p>
-            <label class="beard-shape"><input type="radio" name="beard-shape" value="1"><div class="radio-btn"></div>адмирал<img src="app/img/mobile/beard-1.png" width="52px" height="49px" alt="борода раз"></label>
-            <div class="form-beard-shape"></div>
-            <label class="beard-shape"><input type="radio" name="beard-shape" value="2"><div class="radio-btn"></div>лесоруб<img src="app/img/mobile/beard-2.png" width="58px" height="68px" alt="борода два"></label>
-            <label class="beard-shape"><input type="radio" name="beard-shape" value="3"><div class="radio-btn"></div>полярник<img src="app/img/mobile/beard-3.png" width="64px" height="78px" alt="три борода"></label>
-            <label class="beard-shape"><input type="radio" name="beard-shape" value="4"><div class="radio-btn"></div>боярин<img src="app/img/mobile/beard-4.png" width="58px" height="98px" alt="четыре борода"></label>
-            <label class="beard-shape"><input type="radio" name="beard-shape" value="5"><div class="radio-btn"></div>мудрец<img src="app/img/mobile/beard-5.png" width="46px" height="105px" alt="и пять борода"></label>
+            <div class="form__beard-shape-wrapper">
+                <label class="beard-shape"><input type="radio" name="beard-shape" value="1"><div class="radio-btn"></div>адмирал<img src="app/img/mobile/beard-1.png" width="52px" height="49px" alt="борода раз"></label>
+                <div class="form-beard-shape"></div>
+                <label class="beard-shape"><input type="radio" name="beard-shape" value="2"><div class="radio-btn"></div>лесоруб<img src="app/img/mobile/beard-2.png" width="58px" height="68px" alt="борода два"></label>
+                <label class="beard-shape"><input type="radio" name="beard-shape" value="3"><div class="radio-btn"></div>полярник<img src="app/img/mobile/beard-3.png" width="64px" height="78px" alt="три борода"></label>
+                <label class="beard-shape"><input type="radio" name="beard-shape" value="4"><div class="radio-btn"></div>боярин<img src="app/img/mobile/beard-4.png" width="58px" height="98px" alt="четыре борода"></label>
+                <label class="beard-shape"><input type="radio" name="beard-shape" value="5"><div class="radio-btn"></div>мудрец<img src="app/img/mobile/beard-5.png" width="46px" height="105px" alt="и пять борода"></label>
+            </div>
             <p class="form__group-heading">Дополнительные услуги:</p>
-            <label><input type="checkbox" name="additionally" id="1">Подкрасить бороду</label>
-            <label><input type="checkbox" name="additionally" id="2">Накрутить усы</label>
-            <label><input type="checkbox" name="additionally" id="3">Причесать бороду</label>
-            <label><input type="checkbox" name="additionally" id="4">Подровнять виски</label>
-            <label><input type="checkbox" name="additionally" id="5">Убрать седину</label>
-            <label><input type="checkbox" name="additionally" id="6">Отполировать лысину</label>
-            <input class="form-btn btn" type="submit" value="Отправить заявку">
+            <div class="form__additionally-wrapper">
+                <label><input type="checkbox" name="additionally" id="1">Подкрасить бороду</label>
+                <label><input type="checkbox" name="additionally" id="2">Накрутить усы</label>
+                <label><input type="checkbox" name="additionally" id="3">Причесать бороду</label>
+                <label><input type="checkbox" name="additionally" id="4">Подровнять виски</label>
+                <label><input type="checkbox" name="additionally" id="5">Убрать седину</label>
+                <label><input type="checkbox" name="additionally" id="6">Отполировать лысину</label>
+            </div>
+            <input class="form__btn btn" type="submit" value="Отправить заявку">
         </div>
     </form>
     <footer class="footer">

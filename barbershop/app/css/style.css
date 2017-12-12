@@ -36,6 +36,18 @@ h2[class$="heading"] {
   font-size: 30px;
   line-height: 30px; }
 
+.btn {
+  clear: both;
+  display: block;
+  width: 100%;
+  height: 50px;
+  line-height: 50px;
+  font-weight: 700;
+  text-transform: uppercase;
+  text-align: center;
+  text-decoration: none;
+  border: 1px solid #e5ddd5; }
+
 .page-header {
   background-color: #242424; }
 
@@ -219,10 +231,11 @@ h2[class$="heading"] {
     height: 0;
     border-top: 35px solid #242424;
     border-bottom: 35px solid transparent;
-    border-right: 160px solid transparent;
-    border-left: 160px solid transparent; }
+    border-right: 50vw solid transparent;
+    border-left: 50vw solid transparent; }
   .advantages__slider {
     width: 280px;
+    padding-bottom: 30px;
     overflow: hidden; }
   .advantages__slider-container {
     width: 840px; }
@@ -241,7 +254,8 @@ h2[class$="heading"] {
   .advantages__slider-controls {
     text-align: center;
     position: absolute;
-    bottom: 10px; }
+    bottom: 10px;
+    width: 280px; }
   .advantages input {
     display: none; }
   .advantages label[for$="-slide"] {
@@ -316,7 +330,6 @@ h2[class$="heading"] {
 .news__btn {
   clear: both;
   display: block;
-  font-size: 18px;
   color: black;
   height: 50px;
   line-height: 50px;
@@ -326,84 +339,91 @@ h2[class$="heading"] {
   text-decoration: none;
   border: 1px solid #e5ddd5; }
 
-.reviews::after {
-  position: absolute;
-  content: "";
-  display: block;
-  width: 0;
-  height: 0;
-  border-top: 35px solid white;
-  border-bottom: 35px solid transparent;
-  border-right: 160px solid transparent;
-  border-left: 160px solid transparent; }
-
-.reviews__slider {
-  width: 280px;
-  overflow: hidden;
-  text-align: center; }
-
-.reviews__slider-container {
-  width: 840px; }
-  .reviews__slider-container::after {
+.reviews {
+  position: relative;
+  margin-bottom: 70px; }
+  .reviews::after {
+    position: absolute;
     content: "";
-    display: table;
-    clear: both; }
+    display: block;
+    width: 0;
+    height: 0;
+    border-top: 35px solid white;
+    border-bottom: 35px solid transparent;
+    border-right: 50vw solid transparent;
+    border-left: 50vw solid transparent; }
+  .reviews__slider {
+    width: 280px;
+    padding-bottom: 30px;
+    overflow: hidden;
+    text-align: center; }
+  .reviews__slider-container {
+    width: 840px; }
+    .reviews__slider-container::after {
+      content: "";
+      display: table;
+      clear: both; }
+  .reviews__item {
+    box-sizing: border-box;
+    float: left;
+    width: 280px;
+    padding-bottom: 20px; }
+    .reviews__item img {
+      float: left; }
+    .reviews__item-heading {
+      float: right;
+      width: 210px;
+      font-size: 24px;
+      line-height: 24px;
+      font-weight: 700;
+      margin: 0;
+      margin-bottom: 5px;
+      text-align: left; }
+    .reviews__item-text {
+      float: right;
+      width: 210px;
+      margin: 0;
+      text-align: left; }
+  .reviews__slider-controls {
+    text-align: center;
+    position: absolute;
+    bottom: 10px;
+    width: 280px; }
+  .reviews input {
+    display: none; }
+  .reviews label[for$="-slide"] {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    box-sizing: border-box;
+    border: 1px solid #000;
+    transform: rotate(45deg);
+    margin-right: 10px; }
+    .reviews label[for$="-slide"]:last-child {
+      margin: 0; }
 
-.reviews__item {
-  box-sizing: border-box;
-  float: left;
-  width: 280px;
-  padding-bottom: 20px; }
-  .reviews__item img {
-    float: left; }
-  .reviews__item-heading {
-    float: right;
-    width: 210px;
-    font-size: 24px;
-    line-height: 24px;
-    font-weight: 700;
-    margin: 0;
-    margin-bottom: 5px;
-    text-align: left; }
-  .reviews__item-text {
-    float: right;
-    width: 210px;
-    margin: 0;
-    text-align: left; }
-
-.reviews __slider-controls {
-  text-align: center; }
-
-.reviews input {
-  display: none; }
-
-.reviews label[for$="-slide"] {
-  display: inline-block;
-  width: 10px;
-  height: 10px;
-  box-sizing: border-box;
-  border: 1px solid #000;
-  transform: rotate(45deg);
-  margin-right: 10px; }
-  .reviews label[for$="-slide"]:last-child {
-    margin: 0; }
-
-.reviews__slider input[id="reviews-first-slider"]:checked ~ .reviews__slider-container {
+.reviews__slider #reviews-first-slide:checked ~ .reviews__slider-container {
   transform: translateX(0); }
 
-.reviews__slider input[id="reviews-second-slide"]:checked ~ .reviews__slider-container {
+.reviews__slider #reviews-second-slide:checked ~ .reviews__slider-container {
   transform: translateX(-280px); }
 
-.reviews__slider input[id="reviews-third-slide"]:checked ~ .reviews__slider-container {
+.reviews__slider #reviews-third-slide:checked ~ .reviews__slider-container {
   transform: translateX(-560px); }
+
+.reviews__slider #reviews-first-slide:checked ~ .reviews__slider-controls label[for="reviews-first-slide"],
+.reviews__slider #reviews-second-slide:checked ~ .reviews__slider-controls label[for="reviews-second-slide"],
+.reviews__slider #reviews-third-slide:checked ~ .reviews__slider-controls label[for="reviews-third-slide"] {
+  background-color: #000; }
 
 .footer {
   color: white;
   background-color: #242424;
   text-align: center;
-  padding-bottom: 10px; }
+  padding-bottom: 10px;
+  margin-top: -70px; }
   .footer__address {
-    padding-top: 20px; }
+    padding-top: 70px; }
   .footer__address-name {
     font-weight: 700; }
   .footer__phone {
@@ -444,10 +464,24 @@ h2[class$="heading"] {
     background-color: #242424;
     margin-bottom: 25px; }
 
+body {
+  background-color: #f8f5f2; }
+
 .form {
   background-color: #f8f5f2;
   margin: 0;
-  padding: 0; }
+  padding: 0;
+  margin-bottom: 70px; }
+  .form::after {
+    position: absolute;
+    content: "";
+    display: block;
+    width: 0;
+    height: 0;
+    border-top: 35px solid #f8f5f2;
+    border-bottom: 35px solid transparent;
+    border-right: 50vw solid transparent;
+    border-left: 50vw solid transparent; }
   .form input[type="text"],
   .form input[type="phone"],
   .form input[type="email"],
@@ -469,6 +503,10 @@ h2[class$="heading"] {
     text-align: center;
     font-weight: 300;
     padding: 20px; }
+  .form__wrapper::after {
+    content: "";
+    display: table;
+    clear: both; }
   .form .beard-shape {
     display: block;
     float: left;
