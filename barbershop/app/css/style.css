@@ -43,6 +43,7 @@ h2[class$="heading"] {
   height: 50px;
   line-height: 50px;
   font-weight: 700;
+  color: black;
   text-transform: uppercase;
   text-align: center;
   text-decoration: none;
@@ -221,14 +222,14 @@ h2[class$="heading"] {
   color: white;
   padding-top: 20px;
   text-align: center;
-  position: relative;
-  margin-bottom: 70px; }
+  position: relative; }
   .advantages::after {
     position: absolute;
     content: "";
     display: block;
     width: 0;
     height: 0;
+    bottom: -70px;
     border-top: 35px solid #242424;
     border-bottom: 35px solid transparent;
     border-right: 50vw solid transparent;
@@ -283,71 +284,59 @@ h2[class$="heading"] {
 .advantages__slider #advantages-third-slide:checked ~ .advantages__slider-controls label[for="advantages-third-slide"] {
   background-color: #fff; }
 
-.news__preview {
-  padding: 20px 0;
-  border-bottom: 1px solid #e5ddd5; }
-  .news__preview::after {
-    content: "";
-    display: table;
-    clear: both; }
-  .news__preview:last-of-type {
-    border: none; }
-
-.news__date {
-  text-align: center;
-  width: 50px;
-  height: 50px;
-  float: left;
-  color: #fff;
-  background-color: #000;
-  position: relative; }
-  .news__date::before {
-    content: "";
-    display: block;
-    width: 0;
-    height: 0;
-    border: 25px solid transparent;
-    border-top: 10px solid black;
-    margin-top: 50px; }
-  .news__date .day {
-    font-size: 30px;
-    position: absolute;
-    top: 5px;
-    left: 0;
-    width: 50px; }
-  .news__date .month {
-    font-size: 16px;
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 50px; }
-
-.news__text {
-  float: right;
-  width: 210px;
-  margin: 0; }
-
-.news__btn {
-  clear: both;
-  display: block;
-  color: black;
-  height: 50px;
-  line-height: 50px;
-  font-weight: 700;
-  text-transform: uppercase;
-  text-align: center;
-  text-decoration: none;
-  border: 1px solid #e5ddd5; }
+.news {
+  padding-top: 35px; }
+  .news__preview {
+    padding: 20px 0;
+    border-bottom: 1px solid #e5ddd5; }
+    .news__preview::after {
+      content: "";
+      display: table;
+      clear: both; }
+    .news__preview:last-of-type {
+      border: none; }
+  .news__date {
+    text-align: center;
+    width: 50px;
+    height: 50px;
+    float: left;
+    color: #fff;
+    background-color: #000;
+    position: relative; }
+    .news__date::before {
+      content: "";
+      display: block;
+      width: 0;
+      height: 0;
+      border: 25px solid transparent;
+      border-top: 10px solid black;
+      margin-top: 50px; }
+    .news__date .day {
+      font-size: 30px;
+      position: absolute;
+      top: 5px;
+      left: 0;
+      width: 50px; }
+    .news__date .month {
+      font-size: 16px;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 50px; }
+  .news__text {
+    float: right;
+    width: 210px;
+    margin: 0; }
 
 .reviews {
-  position: relative;
-  margin-bottom: 70px; }
+  position: relative; }
   .reviews::after {
     position: absolute;
     content: "";
     display: block;
     width: 0;
     height: 0;
+    bottom: -70px;
     border-top: 35px solid white;
     border-bottom: 35px solid transparent;
     border-right: 50vw solid transparent;
@@ -421,9 +410,7 @@ h2[class$="heading"] {
   background-color: #242424;
   text-align: center;
   padding-bottom: 10px;
-  margin-top: -70px; }
-  .footer__address {
-    padding-top: 70px; }
+  padding-top: 70px; }
   .footer__address-name {
     font-weight: 700; }
   .footer__phone {
@@ -447,41 +434,35 @@ h2[class$="heading"] {
     box-sizing: border-box;
     display: block;
     float: left;
-    width: 33%;
+    width: 33.33%;
     height: 90px;
     border: 1px solid #e5ddd5; }
   .footer__btn {
-    display: block;
     font-size: 18px;
     color: white;
-    height: 50px;
-    width: 100%;
-    line-height: 50px;
-    font-weight: 700;
-    text-align: center;
-    text-decoration: none;
-    border: 1px solid #e5ddd5;
     background-color: #242424;
     margin-bottom: 25px; }
 
-body {
-  background-color: #f8f5f2; }
-
 .form {
   background-color: #f8f5f2;
-  margin: 0;
-  padding: 0;
-  margin-bottom: 70px; }
+  padding-bottom: 40px;
+  padding-top: 1px;
+  position: relative; }
   .form::after {
     position: absolute;
     content: "";
     display: block;
     width: 0;
     height: 0;
+    bottom: -70px;
     border-top: 35px solid #f8f5f2;
     border-bottom: 35px solid transparent;
     border-right: 50vw solid transparent;
     border-left: 50vw solid transparent; }
+  .form input {
+    font-family: "PT Sans Narrow", sans-serif;
+    font-size: 18px;
+    line-height: 27px; }
   .form input[type="text"],
   .form input[type="phone"],
   .form input[type="email"],
@@ -491,19 +472,18 @@ body {
     box-sizing: border-box;
     border: 1px solid #e6ded6;
     margin-bottom: 6px;
-    padding: 20px;
-    font-family: "PT Sans Narrow", sans-serif;
-    font-size: 18px; }
-  .form textarea {
-    line-height: 27px;
     padding: 20px; }
+  .form .form-info {
+    line-height: 27px;
+    padding: 20px;
+    min-height: 112px; }
   .form .form__group-heading {
     font-size: 20px;
     text-transform: uppercase;
     text-align: center;
     font-weight: 300;
     padding: 20px; }
-  .form__wrapper::after {
+  .form [class$="-wrapper"]::after {
     content: "";
     display: table;
     clear: both; }
@@ -513,7 +493,7 @@ body {
     width: 33%;
     min-height: 201px;
     text-align: center; }
-  .form .radio-btn {
+  .form .radio-beard-shape {
     position: relative;
     box-sizing: border-box;
     display: inline-block;
@@ -522,7 +502,7 @@ body {
     border: 1px solid #e6ded6;
     border-radius: 50%;
     background-color: #fff; }
-    .form .radio-btn::after {
+    .form .radio-beard-shape::after {
       content: "";
       display: none;
       box-sizing: border-box;
@@ -538,5 +518,25 @@ body {
       margin-left: -9px; }
   .form input[name="beard-shape"] {
     display: none; }
-  .form input[name="beard-shape"]:checked + .radio-btn::after {
+  .form input[name="beard-shape"]:checked + .radio-beard-shape::after {
     display: block; }
+  .form__additionally-wrapper .checkbox-additionally {
+    display: block;
+    float: left;
+    width: 36px;
+    height: 36px;
+    margin-right: 24px;
+    border: 1px solid #e5ddd5; }
+  .form__additionally-wrapper input[name="additionally"]:checked + .checkbox-additionally {
+    background: url(../img/mobile/check.png) 50% 50% no-repeat; }
+  .form__additionally-wrapper label {
+    display: block;
+    line-height: 38px;
+    margin-bottom: 20px;
+    cursor: pointer; }
+  .form__additionally-wrapper input {
+    display: none; }
+  .form__btn {
+    background-color: #826550;
+    color: white;
+    margin-top: 30px; }
