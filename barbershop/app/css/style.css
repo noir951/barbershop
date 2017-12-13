@@ -540,3 +540,70 @@ h2[class$="heading"] {
     background-color: #826550;
     color: white;
     margin-top: 30px; }
+
+.photo {
+  background-color: #f8f5f2;
+  padding-top: 1px; }
+  .photo__main-item {
+    position: relative;
+    box-sizing: border-box;
+    border: 1px solid #e6ded6;
+    margin-bottom: 20px; }
+    .photo__main-item::after {
+      content: "";
+      display: table;
+      clear: both; }
+    .photo__main-item--sticker {
+      position: absolute;
+      left: 0;
+      top: 400px;
+      z-index: 1;
+      padding: 0 25px;
+      line-height: 50px;
+      background-color: #83654f;
+      color: white;
+      text-transform: uppercase;
+      font-weight: 700; }
+      .photo__main-item--sticker::before {
+        display: block;
+        position: absolute;
+        top: 0;
+        right: -10px;
+        content: "";
+        width: 0;
+        height: 0;
+        border-top: 25px solid #83654f;
+        border-right: 10px solid transparent;
+        border-bottom: 25px solid #83654f; }
+  .photo__item {
+    box-sizing: border-box;
+    border: 1px solid #e6ded6;
+    margin-bottom: 20px; }
+    .photo__item::after {
+      content: "";
+      display: table;
+      clear: both; }
+  .photo__main-photo, .photo__photo {
+    display: block;
+    width: 100%;
+    margin-bottom: 20px; }
+  .photo__item-heading {
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    padding: 0 20px; }
+  .photo__text {
+    padding: 0 20px; }
+  .photo__additionally {
+    width: 50%;
+    float: left;
+    vertical-align: text-top;
+    margin-bottom: 10px; }
+    .photo__additionally span {
+      margin-left: 55px; }
+  .photo .scissors {
+    background: url(../img/mobile/photo-scissors-icon.png) no-repeat 15% 50%; }
+  .photo .beard {
+    background: url(../img/mobile/photo-beard-icon.png) no-repeat 15% 50%; }
+  .photo .mustache {
+    background: url(../img/mobile/photo-mustache-icon.png) no-repeat 5% 50%; }
